@@ -13,8 +13,7 @@ public protocol BaseWireframe {
     var navigationController: UINavigationController! { set get }
 }
 
-class LoadingWireframe: NSObject {
-    
+class LoadingWireframe {
     func installRootViewControllerIntoWindow(window: UIWindow) {
         
         window.rootViewController = loadRepositories(window: window)
@@ -22,7 +21,6 @@ class LoadingWireframe: NSObject {
     }
     
     private func loadRepositories(window: UIWindow) -> UIViewController {
-    
         var wireframe: RepositoriesWireframeProtocol = RepositoriesWireframe()
         let navigationController = UINavigationController(rootViewController: wireframe.build(data: nil))
         wireframe.navigationController = navigationController

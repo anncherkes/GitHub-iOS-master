@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B8982D4C40885E7C465F540 /* Pods_GitHub_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D719412C573740BEE38D38 /* Pods_GitHub_iOSTests.framework */; };
 		1B5233D4A701D2BC3D17ACA5 /* Pods_GitHub_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1564A01236D19D41A3A1E9A /* Pods_GitHub_iOS.framework */; };
+		E91F4AB92322BEEA0012CBB0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91F4AB82322BEEA0012CBB0 /* WebKit.framework */; };
 		F03FB1272198339A0057E316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03FB1262198339A0057E316 /* AppDelegate.swift */; };
 		F03FB12E2198339C0057E316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03FB12D2198339C0057E316 /* Assets.xcassets */; };
 		F03FB1312198339C0057E316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03FB12F2198339C0057E316 /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		93D719412C573740BEE38D38 /* Pods_GitHub_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8ED8A0A9A44B27E417C91C /* Pods-GitHub-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-iOSTests/Pods-GitHub-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E1564A01236D19D41A3A1E9A /* Pods_GitHub_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91F4AB82322BEEA0012CBB0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F03FB1232198339A0057E316 /* GitHub-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03FB1262198339A0057E316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F03FB12D2198339C0057E316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91F4AB92322BEEA0012CBB0 /* WebKit.framework in Frameworks */,
 				1B5233D4A701D2BC3D17ACA5 /* Pods_GitHub_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +154,7 @@
 		002DF40187142294F37662B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E91F4AB82322BEEA0012CBB0 /* WebKit.framework */,
 				E1564A01236D19D41A3A1E9A /* Pods_GitHub_iOS.framework */,
 				93D719412C573740BEE38D38 /* Pods_GitHub_iOSTests.framework */,
 			);
