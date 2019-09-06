@@ -40,7 +40,7 @@ class LoginPresenter: LoginPresenterProtocol {
                 self.view?.stopLoading()
                 
                 guard let _ = user else {
-                    self.view?.dismiss()
+                    self.view?.close()
                     return
                 }
                 self.closeLoginWithSuccess()
@@ -50,7 +50,7 @@ class LoginPresenter: LoginPresenterProtocol {
     
     private func closeLoginWithSuccess() {
         delegate?.successfulLogin()
-        self.view?.dismiss()
+        self.view?.close()
     }
     
     public func checkURL(url: URL?) -> Bool {

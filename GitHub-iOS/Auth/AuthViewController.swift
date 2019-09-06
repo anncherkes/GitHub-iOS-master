@@ -13,7 +13,7 @@ import ANLoader
 protocol LoginViewControllerProtocol: class {
     func startLoading()
     func stopLoading()
-    func dismiss()
+    func close()
 }
 
 class LoginViewController: UIViewController, LoginViewControllerProtocol, WKNavigationDelegate {
@@ -24,6 +24,7 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol, WKNavi
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultSettingForWebView()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(close))
     }
     
     public func startLoading() {
@@ -42,7 +43,6 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol, WKNavi
     }
     
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Swift.Void) {
-        
         if presenter.checkURL(url: navigationAction.request.url) {
             guard let code =  navigationAction.request.url?.query?.components(separatedBy: "code=").last else { return }
             if presenter.checkCode(code: code) {
@@ -50,11 +50,10 @@ class LoginViewController: UIViewController, LoginViewControllerProtocol, WKNavi
                 return
             }
         }
-        
         decisionHandler(.allow)
     }
-    
-    public func dismiss() {
+
+     @objc func close() {
         navigationController?.dismiss(animated: true, completion: nil)
     }
 }
